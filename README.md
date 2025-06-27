@@ -302,6 +302,26 @@ class User < BaseObject
 end
 ```
 
+### The `@requiresScopes` directive (Apollo Federation v2)
+
+[Apollo documentation](https://www.apollographql.com/docs/graphos/routing/security/authorization#requiresscopes)
+
+Call `requires_scopes` within your class definition:
+
+```ruby
+class User < BaseObject
+  requires_scopes [ [ 'profile:read' ], [ 'all_profiles:read' ] ]
+end
+```
+
+Pass the `requires_scopes:` option to your field definition:
+
+```ruby
+class User < BaseObject
+  field :name, String, requires_scopes: [ [ 'pii:read'] ]
+end
+```
+
 ### Field set syntax
 
 Field sets can be either strings encoded with the Apollo Field Set [syntax]((https://www.apollographql.com/docs/apollo-server/federation/federation-spec/#scalar-_fieldset)) or arrays, hashes and snake case symbols that follow the graphql-ruby conventions:

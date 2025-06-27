@@ -44,6 +44,16 @@ module ApolloFederation
         )
       end
 
+      def requires_scopes(scopes)
+        add_directive(
+          name: 'requiresScopes',
+          arguments: [
+            name: 'scopes',
+            values: scopes,
+          ],
+        )
+      end
+
       def underscore_reference_keys(value = nil)
         if value.nil?
           if @underscore_reference_keys.nil?
