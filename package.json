@@ -15,9 +15,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@apollo/gateway": "^2.4.1",
-    "@apollo/server": "^4.7.4",
-    "graphql": "^16.6.0"
+    "@apollo/gateway": "^2.10.1",
+    "@apollo/server": "^4.9.3",
+    "graphql": "^16.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",
@@ -30,10 +30,10 @@
     "eslint-config-gusto": "^10.1.0",
     "graphql-tag": "^2.10.3",
     "jest": "^26.0.1",
-    "minimist": "^1.2.6",
+    "minimist": "^1.2.7",
     "nodemon": "^2.0.4",
     "semantic-release": "^19.0.3",
     "semantic-release-rubygem": "^1.0.3",
-    "yargs-parser": "^21.0.1"
+    "yargs-parser": "^21.1.0"
   }
 }
